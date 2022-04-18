@@ -1,1 +1,3 @@
-theme/
+node_modules/
+dist/
+src/common/resources/css/bluehat.css
