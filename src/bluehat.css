@@ -1,0 +1,16 @@
+@tailwind base;
+
+.esp-button {
+  @apply bg-white border border-gray-300 hover:bg-gray-300 cursor-pointer transition text-gray-800 w-full py-2 rounded text-center flex items-center justify-center;
+}
+.esp-button-primary {
+  @apply bg-blue-500 hover:border-blue-600 border-blue-500 hover:bg-blue-600 text-white;
+}
+.esp-button-danger {
+  @apply border-red-700 hover:bg-red-700 text-red-700 hover:text-white;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+body { @apply flex flex-col min-h-screen; }

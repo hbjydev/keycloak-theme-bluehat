@@ -1,0 +1,23 @@
+{
+  "name": "bluehat",
+  "version": "0.0.1",
+  "description": "A RedHat SSO-inspired Keycloak theme",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss -i src/bluehat.css -o src/common/resources/css/bluehat.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbjydev/keycloak-theme-bluehat.git"
+  },
+  "author": "Hayden Young <hayden@hbjy.dev>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hbjydev/keycloak-theme-bluehat/issues"
+  },
+  "homepage": "https://github.com/hbjydev/keycloak-theme-bluehat#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

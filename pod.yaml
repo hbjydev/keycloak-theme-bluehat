@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: Pod
+
+metadata:
+  labels:
+    app: bluehat-devel
+  name: bluehat-devel
+
+spec:
+  securityContext:
+    fsGroup: 1000
+
+  volumes:
+    - name: theme-src
+      hostPath:
+        path: ./src
+        type: Directory
+
+  containers:
+    - name: keycloak
+      image: quay.io/keycloak/keycloak:17.0.1
+      command:
+        - /opt/keycloak/bin/kc.sh
+        - start-dev
+
+      ports:
+        - containerPort: 8080
+          hostPort: 8080
+
+      volumeMounts:
+        - mountPath: /opt/keycloak/themes/bluehat
+          name: theme-src
+
+      env:
+        - name: KEYCLOAK_ADMIN
+          value: admin
+        - name: KEYCLOAK_ADMIN_PASSWORD
+          value: admin
